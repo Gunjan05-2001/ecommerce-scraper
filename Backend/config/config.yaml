@@ -1,0 +1,20 @@
+scraper:
+  default_rate_limit: 1.0  # seconds between requests
+  max_retries: 3
+  timeout: 30
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+output:
+  default_format: json
+  save_to_file: true
+  output_directory: "./output"
+
+logging:
+  level: INFO
+  file: "./logs/scraper.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+performance:
+  concurrent_requests: 5
+  cache_enabled: true
+  cache_ttl: 3600  # seconds
